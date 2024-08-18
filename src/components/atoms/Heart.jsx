@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FavoritesContext } from '../../context/FavoritesContext'; // Importa el contexto de favoritos
+import { FavoritesContext } from '../../contexts/FavoritesContext'; // Importa el contexto de favoritos
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const Heart = () => {

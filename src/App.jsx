@@ -10,7 +10,7 @@ import LandingPage from './pages/LandingPage'; // Landing page component
 import King from './pages/King'; // King page component
 
 // Context
-import { ThemeContext } from './context/ThemeContext'; // Ajusta la ruta según tu estructura de archivos
+import { ThemeContext } from './contexts/ThemeContext'; // Ajusta la ruta según tu estructura de archivos
 
 function App() {
   const { darkMode } = useContext(ThemeContext);

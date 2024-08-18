@@ -2,8 +2,7 @@
 
 import { NavLink } from 'react-router-dom';
 import imagesArray from '../assets/images/index.js';
-import { ModeButton } from './atoms/Button'; // Asegúrate de que la ruta sea correcta
-import './Nav.css';
+import { ModeButton } from './atoms/Button';
 
 function Nav() {
   return (

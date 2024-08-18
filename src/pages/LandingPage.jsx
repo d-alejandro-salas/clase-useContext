@@ -15,6 +15,7 @@ function LandingPage() {
             <img
               src={item.image}
               alt={item.name}
+              title={item.name}
               className="w-full h-auto object-cover" // Ajusta el tamaño de la imagen si es necesario
             />
           </Link>

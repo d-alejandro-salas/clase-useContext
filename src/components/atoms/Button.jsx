@@ -1,16 +1,13 @@
-// src/components/atoms/Button.jsx
-
 import { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 export const ModeButton = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <button 
-      className="mr-4 px-4 py-2 text-white font-bold rounded bg-gray-800"
+      className={`mr-4 px-4 py-2 font-bold rounded ${darkMode ? "text-black bg-white" : "text-white bg-gray-800"}`}
       onClick={toggleTheme}>
-      CHANGE MODE
+      {darkMode ? "Light Mode" : "Dark Mode"}
     </button>
   )
 }
-
