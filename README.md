@@ -13,10 +13,7 @@ npm install
 
 
 ### 4. Dependencias
-Está bien como lo tienes, pero podrías proporcionar un poco más de contexto sobre las dependencias.
 
-```markdown
-## Dependencies
 - **React**: Installed using Vite for a fast development environment.
 - **Tailwind CSS**: For utility-first styling and responsive design.
 - **React Router DOM**: To handle navigation between the landing page and individual king pages.
@@ -26,11 +23,7 @@ You can install all dependencies by running the following command:
 npm install react react-dom react-router-dom tailwindcss
 
 
-### 5. Estructura del Proyecto
-Es útil, pero podrías incluir un poco más de detalle si crees que los lectores necesitan saber cómo está organizado el proyecto.
-
-```markdown
-## Project Structure
+### 5 Project Structure
 - **Landing Page**: Displays a grid of all Visigoth Kings, styled using Tailwind CSS classes.
 - **King Page**: Shows detailed information about a specific king when clicked in the navigation.
 - **Dark Mode Feature**: A dark mode/light mode toggle has been implemented using the `useContext` hook in React. The toggle button, implemented as an atom within the components directory, uses `useState` to switch between dark and light modes.
