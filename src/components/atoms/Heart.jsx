@@ -3,7 +3,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContextProvider'; // Import the FavoritesContext
 
 const Heart = ({ king }) => {
-  const { favorites, setFavorites } = useContext(FavoritesContext);
+  const [favorites, setFavorites] = useContext(FavoritesContext);
 
   const [liked, setLiked] = useState(false); // Initialize liked with a boolean value
 

@@ -10,7 +10,7 @@ import LandingPage from './pages/LandingPage'; // Landing page component
 import King from './pages/King'; // King page component
 
 // Context
-import { ThemeContext } from './contexts/ThemeContextProvider'; // Ajusta la ruta según tu estructura de archivos
+import { ThemeContext } from './contexts/ThemeContextProvider';
 
 function App() {
   const { darkMode } = useContext(ThemeContext);
@@ -18,9 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <main
-        className={`${darkMode ? "bg-black" : "bg-white"} mt-4`}
-      >
+      <main className={`${darkMode ? "bg-black" : "bg-white"} py-5 h-full`}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/:id" element={<King />} />
