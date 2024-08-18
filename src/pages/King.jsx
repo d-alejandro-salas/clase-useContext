@@ -1,14 +1,14 @@
 // src/pages/King.jsx
 
 import { useParams } from 'react-router-dom';
-import imagesArray from '../assets/images/index.js';
+import kingsArray from '../utils/kingsIndex.js';
 
 function King() {
   // Obtiene el parámetro 'id' de la URL
   const { id } = useParams();
 
   // Encuentra el objeto en el array que tenga el nombre igual al parámetro 'id'
-  const king = imagesArray.find(item => item.name === id);
+  const king = kingsArray.find(king => king.name === id);
 
   return (
     <div className="flex flex-col items-center">

@@ -1,14 +1,27 @@
-import { useState } from 'react';
-import { FavoritesContext } from '../../contexts/FavoritesContext'; // Importa el contexto de favoritos
+import { useState, useContext } from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FavoritesContext } from '../../contexts/FavoritesContextProvider'; // Import the FavoritesContext
 
-const Heart = () => {
+const Heart = ({ king }) => {
+  const { favorites, setFavorites } = useContext(FavoritesContext);
 
-    const [liked,setLiked] = useState()
+  const [liked, setLiked] = useState(false); // Initialize liked with a boolean value
+
+  const handleClick = () => {
+    setLiked(prevStatus => !prevStatus);
+
     
-    const handleClick = () => {
-        setLiked(prevStatus => !prevStatus);
+    //ESTA PORQUERÍA NO FUNCIONA xd
+    if (liked) {
+      // Add the king to favorites when liked
+      setFavorites(prevFavorites => [...prevFavorites, king]);
+    } else {
+      // Remove the king from favorites when unliked
+      setFavorites(prevFavorites => prevFavorites.filter(fav => fav !== king));
     }
+
+    console.log(favorites)
+  };
 
   return (
     <button

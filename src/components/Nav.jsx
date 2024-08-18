@@ -1,7 +1,7 @@
 // src/components/Nav.jsx
 
 import { NavLink } from 'react-router-dom';
-import imagesArray from '../assets/images/index.js';
+import kingsArray from '../utils/kingsIndex.js';
 import { ModeButton } from './atoms/Button';
 
 function Nav() {
@@ -15,13 +15,13 @@ function Nav() {
           HOME
         </NavLink>
         <div className="flex items-center space-x-2">
-          {imagesArray.map((item, index) => (
+          {kingsArray.map((king, index) => (
             <NavLink
               className="text-white no-underline p-2 hover:bg-sky-400 hover:font-bold"
               key={index}
-              to={`/${item.name}`}
+              to={`/${king.name}`}
             >
-              {item.name}
+              {king.name}
             </NavLink>
           ))}
         </div>
