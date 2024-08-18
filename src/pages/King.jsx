@@ -7,17 +7,18 @@ function King() {
   // Obtiene el parámetro 'id' de la URL
   const { id } = useParams();
 
-  // Verifica si el 'id' existe en el objeto imagesArray
-  const imageSrc = imagesArray[id] || null; // Si no existe, será null
+  // Encuentra el objeto en el array que tenga el nombre igual al parámetro 'id'
+  const king = imagesArray.find(item => item.name === id);
 
   return (
     <div className="flex flex-col items-center">
-      <img
-        className="mb-4"
-        src={imageSrc}
-        alt={id}
-      />
+        <img
+          className="mb-4"
+          src={king.image}
+          alt={id}
+        />
       <h1 className="text-red-500 text-3xl font-extrabold uppercase">{id}</h1>
+      <p className="text-lg text-blue-500">Years of reign: {king.reign}.</p>
     </div>
   );
 }

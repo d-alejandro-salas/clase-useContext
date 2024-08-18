@@ -16,13 +16,13 @@ function Nav() {
           HOME
         </NavLink>
         <div className="flex items-center space-x-2">
-          {Object.keys(imagesArray).map(key => (
+          {imagesArray.map((item, index) => (
             <NavLink
               className="text-white no-underline p-2 hover:bg-sky-400 hover:font-bold"
-              key={key}
-              to={`/${key}`}
+              key={index}
+              to={`/${item.name}`}
             >
-              {key}
+              {item.name}
             </NavLink>
           ))}
         </div>
