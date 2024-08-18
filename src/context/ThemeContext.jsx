@@ -1,3 +1,5 @@
+//src/context/ThemeContext.jsx
+
 import { createContext, useState } from 'react';
 
 // Crear el contexto
