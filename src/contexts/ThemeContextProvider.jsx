@@ -1,16 +1,21 @@
 //src/context/ThemeContext.jsx
 
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
-// Crear el contexto
 export const ThemeContext = createContext();
 
-// Componente proveedor del contexto
 export const ThemeProvider = ({ children }) => {
-  // Estado inicial como booleano
-  const [darkMode, setDarkMode] = useState(false);
+  // Estado inicial basado en localStorage o valor por defecto
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
 
-  // Alternar el estado del tema
+  // Efecto para sincronizar el estado con localStorage
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
   const toggleTheme = () => {
     setDarkMode(prevMode => !prevMode);
   };
