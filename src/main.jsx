@@ -4,15 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ThemeProvider } from './contexts/ThemeContextProvider';
-import { FavoritesProvider } from './contexts/FavoritesContextProvider';
+import { FavoritesContextProvider } from './contexts/FavoritesContextProvider'; // Importa el nombre correcto
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <FavoritesProvider>
+      <FavoritesContextProvider> {/* Cambia a FavoritesContextProvider */}
         <App />
-      </FavoritesProvider>
+      </FavoritesContextProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
-

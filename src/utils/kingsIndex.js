@@ -15,6 +15,9 @@ const kingArray = [
   { name: 'Recesvinto', image: Recesvinto, reign: 19 },
   { name: 'Sisebuto', image: Sisebuto, reign: 9 },
   { name: 'Teodorico', image: Teodorico, reign: 33 }
-];
+].map((king, index) => ({
+  id: index + 1,
+  ...king
+}));
 
 export default kingArray;
