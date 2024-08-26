@@ -13,19 +13,19 @@ function Favorites() {
         Array.isArray(favorites) && favorites.length > 0
         ? (
             <div className="mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {favorites.map((king, index) => (
+                {favorites.map((element, index) => (
                     <div key={index} className="mx-auto flex flex-col items-center justify-center relative w-full border border-yellow-500 rounded-xl">
-                        <Heart king={king} />
-                        <Link to={`/${king.name}`} className="w-full flex justify-center mb-2">
+                        <Heart element={element} />
+                        <Link to={`/${element.name}`} className="w-full flex justify-center mb-2">
                             <img
-                                src={king.image}
-                                alt={king.name}
-                                title={king.name}
-                                className="w-full h-auto object-cover"
+                                src={element.image}
+                                alt={element.name}
+                                title={element.name}
+                                className="w-auto h-[400px] object-cover"
                             />
                         </Link>
                         <h1 className="text-green-500 text-3xl font-extrabold uppercase text-center">
-                            {king.name}
+                            {element.name}
                         </h1>
                     </div>
                 ))}

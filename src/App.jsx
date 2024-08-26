@@ -2,7 +2,6 @@
 
 import { useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import "tailwindcss/tailwind.css";
 
 // Components
 import {Nav} from './components/Nav'; // Navigation component
