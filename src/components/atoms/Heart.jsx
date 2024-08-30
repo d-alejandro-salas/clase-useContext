@@ -30,7 +30,7 @@ const Heart = ({ element }) => {
   return (
     <button
       title="Click here to fav!"
-      className="text-red-500 absolute top-0 left-0 m-4 text-xl"
+      className="text-red-500 text-xl"
       onClick={handleClick}>
       {liked ? <FaHeart /> : <FaRegHeart />}
     </button>
