@@ -13,12 +13,17 @@ function LandingPage() {
   return (<>
     <h1 className="text-green-500 text-center uppercase mb-8 text-5xl">Z Warriors</h1>
     <GroupButtons/>
-    <div className="mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       {characters.map((element) => (
-        <div key={element.id} className="flex items-center justify-center relative border border-orange-600 rounded-xl hover:bg-yellow-500 p-2">
+        <div key={element.id} className="flex items-start justify-center relative border border-orange-600 rounded-xl hover:bg-yellow-500 p-2">
           <Heart element={element} />
           <Link to={`/${element.name}`}>
             <img
+              style={{
+                width: 'auto',
+                height: '350px',
+                objectFit: 'contain'
+              }}
               src={element.image}
               alt={element.name}
               title={element.name}
