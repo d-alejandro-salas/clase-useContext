@@ -3,7 +3,7 @@
 import { useParams } from 'react-router-dom';
 import { Heart } from '../components/atoms/Heart';
 import { CharactersContext } from '../contexts/CharactersContext';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContextProvider'; // Importa el ThemeContext
 
 function King() {
@@ -40,7 +40,7 @@ function King() {
               {element.description}
             </p>
           </div>
-        ): (
+        ) : (
           <p>Cargando...</p>
         )
       }

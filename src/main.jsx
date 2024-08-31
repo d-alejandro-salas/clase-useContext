@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 //The main App and the Tailwind style imported
-import App from './App';
+import {App} from './App';
 import "tailwindcss/tailwind.css";
 
 //Contexts
