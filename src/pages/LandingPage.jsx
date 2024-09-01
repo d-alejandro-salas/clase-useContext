@@ -5,7 +5,6 @@ import { Heart } from '../components/atoms/Heart';
 import GroupButtons from '../components/atoms/GroupButtons';
 import { useContext, useState } from 'react';
 import { CharactersContext } from '../contexts/CharactersContext';
-import { Aside } from '../components/Aside';
 
 export const LandingPage = () => {
   const { characters, darkMode } = useContext(CharactersContext);

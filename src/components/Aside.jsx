@@ -1,3 +1,5 @@
+//src/components/Aside.jsx
+
 import { useState } from "react";
 import { Comments } from "./molecules/Comments";
 import { CommentForm } from "./molecules/CommentForm";

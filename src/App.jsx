@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // Components
 import { Nav } from './components/Nav'; // Navigation component
 import { LandingPage } from './pages/LandingPage'; // Landing page component
-import King from './pages/King'; // King page component
+import {Character} from './pages/Character'; // Character page component
 import Favorites from './pages/Favorites'; // Favorites page component
 
 // Context
@@ -27,7 +27,7 @@ export const App = () => {
         <div className="flex-grow w-full lg:w-3/4 p-4">
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/:id" element={<King />} />
+            <Route path="/:id" element={<Character />} />
             <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </div>
