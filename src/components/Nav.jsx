@@ -13,7 +13,7 @@ export const Nav = () => {
 
   return (
     <nav className={`w-full ${darkMode ? "bg-orange-800" : "bg-orange-400"} p-3 uppercase`}>
-      <div className="flex justify-between items-center  space-x-4">
+      <div className="flex justify-between items-center space-x-4">
         <div className="flex items-center">
           <NavLink
             to="/"

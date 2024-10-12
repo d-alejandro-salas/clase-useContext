@@ -1,23 +1,35 @@
 // src/components/molecules/Comments.jsx
 
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContextProvider';
+import { CommentList } from '../atoms/CommentList';
 
 export const Comments = React.memo(({ comments }) => {
   const { darkMode } = useContext(ThemeContext);
+  const commentsEndRef = useRef(null);
+
+  // Scroll automático al último comentario cuando se agrega uno nuevo
+  useEffect(() => {
+    commentsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [comments]);
 
   return (
-    <div className={`w-full space-y-4 p-4 ${darkMode ? 'bg-orange-800 text-white' : 'bg-orange-100 text-black'} border border-orange-200 rounded-lg shadow-md`}>
+    <div
+      className={`w-full h-96 space-y-4 p-4 overflow-y-scroll ${
+        darkMode
+          ? 'bg-orange-800 text-white'
+          : 'bg-orange-100 text-black'
+      } border border-orange-200 rounded-lg shadow-md`}
+    >
       {comments.length > 0 ? (
-        comments.map((c, index) => (
-          <div key={index} className="p-4 bg-white border border-orange-300 rounded-lg shadow-sm dark:bg-gray-700 dark:text-gray-300">
-            <strong className="block text-orange-600 text-xl mb-2">{c.name}</strong>
-            <p className="text-gray-800 dark:text-gray-400">{c.comment}</p>
-          </div>
+        comments.map((comment, index) => (
+          <CommentList key={index} comment={comment} />
         ))
       ) : (
-        <p className="text-gray-500 dark:text-gray-300">No comments yet. Be the first to comment!</p>
+        <p className="text-gray-500">No hay comentarios aún. Sé el primero en comentar!</p>
       )}
+      {/* Ancla para hacer scroll automático */}
+      <div ref={commentsEndRef} />
     </div>
   );
 });

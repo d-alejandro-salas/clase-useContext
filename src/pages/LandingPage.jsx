@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import { Heart } from '../components/atoms/Heart';
-import GroupButtons from '../components/atoms/GroupButtons';
+import {GroupButtons} from '../components/atoms/GroupButtons';
 import { useContext, useState } from 'react';
 import { CharactersContext } from '../contexts/CharactersContext';
 

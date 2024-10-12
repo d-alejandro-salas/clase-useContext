@@ -3,7 +3,7 @@
 import { useContext } from 'react';
 import { CharactersContext } from '../../contexts/CharactersContext';
 
-function GroupButtons() {
+export const GroupButtons = () => {
   const { handleGoodGuys, handleBadGuys, handleAll, buttonState } = useContext(CharactersContext);
 
   return (
@@ -35,5 +35,3 @@ function GroupButtons() {
     </div>
   );
 }
-
-export default GroupButtons;
